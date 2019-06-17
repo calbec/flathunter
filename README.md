@@ -1,5 +1,9 @@
 # Python Flathunter-Helper
 
+## Disclaimer
+This script crawls websites and looks for new offers. Any changes to the webpages can break this script immediately, use with caution. 
+
+
 ## Setup
 
 
