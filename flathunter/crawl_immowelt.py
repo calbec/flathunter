@@ -66,8 +66,6 @@ class CrawlImmowelt:
                 print("Keine Zimmeranzahl gegeben")
                 rooms = "Nicht gegeben"
 				
-			print("first done")
-				
             details = {
                 'id': int(expose_ids[idx].get("data-estateid")),
                 'url':  address ,
