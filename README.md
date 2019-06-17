@@ -3,6 +3,19 @@
 ## Setup
 
 
+### Prerequisites
+To set up from scratch: 
+```
+apt install python3
+git clone https://github.com/GerRudi/flathunter.git
+apt install python3-pip
+cp config.yaml.dist config.yaml
+nano config.yaml
+-> Do your edits to config file
+apt install python3-setuptools
+pip install python3-wheel
+
+```
 
 
 
@@ -14,7 +27,7 @@ pip install -r requirements.txt
 
 ## Usage
 ```
-usage: flathunter.py [-h] [--config CONFIG]
+usage: python3 flathunter.py [-h] [--config CONFIG]
 
 Searches for flats on Immobilienscout24.de and wg-gesucht.de and sends results
 to Telegram User
