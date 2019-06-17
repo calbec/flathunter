@@ -32,7 +32,7 @@ class CrawlImmowelt:
         entries = []
         soup = soup.find(id="listItemWrapperFixed")
         try:
-            title_elements = soup.find_all( lambda e: e.has_attr('class') and 'ellipsis' in e['class'])
+            title_elements = soup.find_all("h2", {"class": "ellipsis" })
         except AttributeError:
             return entries
         expose_ids=soup.find_all("div", class_="listitem_wrap")
@@ -47,26 +47,26 @@ class CrawlImmowelt:
 			
             try:
                 print(tags[0].find("strong").text)
-                price = tags[0].find("strong").text
+                price = tags[0].find("strong").text.strip()
             except IndexError:
                 print("Kein Preis angegeben")
                 price = "Auf Anfrage"
 
             try:
-                print(tags[1].text)
-                size = tags[1].text
+                print(tags[1].text.strip())
+                size = tags[1].text.strip()
             except IndexError:
                 size = "Nicht gegeben"
                 print("Quadratmeter nicht angegeben")				
 				
             try:
-                print(tags[2].text)
-                rooms = tags[2].text
+                print(tags[2].text.strip())
+                rooms = tags[2].text.strip()
             except IndexError:
                 print("Keine Zimmeranzahl gegeben")
                 rooms = "Nicht gegeben"
 				
-
+			print("first done")
 				
             details = {
                 'id': int(expose_ids[idx].get("data-estateid")),
