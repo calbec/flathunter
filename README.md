@@ -60,5 +60,6 @@ To use the distance calculation feature a [Google API-Key](https://developers.go
 - Bene
 - [@tschuehly](https://github.com/tschuehly)
 - [@Cugu](https://github.com/Cugu)
+- [@GerRudi](https://github.com/GerRudi)
 
 
