@@ -1,5 +1,9 @@
 # Python Flathunter-Helper
 
+## Disclaimer
+This script crawls websites and looks for new offers. Any changes to the webpages can break this script immediately, use with caution. 
+
+
 ## Setup
 
 
@@ -40,7 +44,14 @@ optional arguments:
 
 ```
 
+
+
+
 ### Configuration
+
+#### Links
+
+Currently, ebay-kleinanzeigen and immowelt only crawl the first page, so make sure to sort by newest offers
 
 #### Bot registration
 A new bot can registered with the telegram chat with the [BotFather](https://telegram.me/BotFather).
@@ -60,5 +71,6 @@ To use the distance calculation feature a [Google API-Key](https://developers.go
 - Bene
 - [@tschuehly](https://github.com/tschuehly)
 - [@Cugu](https://github.com/Cugu)
+- [@GerRudi](https://github.com/GerRudi)
 
 
