@@ -13,7 +13,7 @@ cp config.yaml.dist config.yaml
 nano config.yaml
 -> Do your edits to config file
 apt install python3-setuptools
-pip install python3-wheel
+apt install python3-wheel
 
 ```
 
@@ -22,7 +22,7 @@ pip install python3-wheel
 ### Requirements
 Install requirements from ```requirements.txt``` to run execute flathunter properly.
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
