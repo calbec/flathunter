@@ -53,6 +53,7 @@ class CrawlImmowelt:
                 price = "Auf Anfrage"
 
             try:
+		tags[1].find("div").extract()
                 print(tags[1].text.strip())
                 size = tags[1].text.strip()
             except IndexError:
@@ -60,6 +61,7 @@ class CrawlImmowelt:
                 print("Quadratmeter nicht angegeben")				
 				
             try:
+		tags[2].find("div").extract()
                 print(tags[2].text.strip())
                 rooms = tags[2].text.strip()
             except IndexError:
