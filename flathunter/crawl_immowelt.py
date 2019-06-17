@@ -43,7 +43,7 @@ class CrawlImmowelt:
         for idx,title_el in enumerate(title_elements):
 			
             tags = expose_ids[idx].find_all(class_="hardfact")
-            address = "https://www.immowelt.de/" +title_el.get("href")
+            address = "https://www.immowelt.de/" +expose_ids[idx].find("a").get("href")
 			
             try:
                 print(tags[0].find("strong").text)
