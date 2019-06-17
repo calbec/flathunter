@@ -46,7 +46,7 @@ optional arguments:
 A new bot can registered with the telegram chat with the [BotFather](https://telegram.me/BotFather).
 
 #### Chat-Ids
-To get the chat id, the [REST-Api](https://core.telegram.org/bots/api) of telegram can be used to fetch the received messages of the Bot.
+To get the chat id (receiver ID), the [REST-Api](https://core.telegram.org/bots/api) of telegram can be used to fetch the received messages of the Bot.
 ```
 $ curl https://api.telegram.org/bot[BOT-TOKEN]/getUpdates
 ```
