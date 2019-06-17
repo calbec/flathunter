@@ -35,7 +35,7 @@ class CrawlImmowelt:
             title_elements = soup.find_all( lambda e: e.has_attr('class') and 'ellipsis' in e['class'])
         except AttributeError:
             return entries
-        expose_ids=soup.find_all("div", class_="listitem")
+        expose_ids=soup.find_all("div", class_="listitem_wrap")
 
 
         #soup.find_all(lambda e: e.has_attr('data-adid'))
@@ -69,7 +69,7 @@ class CrawlImmowelt:
 
 				
             details = {
-                'id': int(expose_ids[idx].get("data-adid")),
+                'id': int(expose_ids[idx].get("data-estateid")),
                 'url':  address ,
                 'title': title_el.text.strip(),
                 'price': price,
