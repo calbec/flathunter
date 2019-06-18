@@ -80,6 +80,7 @@ class CrawlImmowelt:
                 'size': size,
                 'rooms': rooms ,
                 'address': address
+                'location': address ,
             }
             entries.append(details)
         
