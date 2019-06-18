@@ -32,7 +32,7 @@ class CrawlImmowelt:
         entries = []
         soup = soup.find(id="listItemWrapperFixed")
         try:
-            title_elements = soup.find_all("h2", {"class": "ellipsis" })
+            title_elements = soup.find_all("h2")
         except AttributeError:
             return entries
         expose_ids=soup.find_all("div", class_="listitem_wrap")
