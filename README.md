@@ -63,7 +63,7 @@ $ curl https://api.telegram.org/bot[BOT-TOKEN]/getUpdates
 ```
 
 #### Google API
-To use the distance calculation feature a [Google API-Key](https://developers.google.com/maps/documentation/javascript/get-api-key) is needed.
+To use the distance calculation feature a [Google API-Key](https://developers.google.com/maps/documentation/javascript/get-api-key) is needed and requires the Distance Matrix API to be enabled. (This is NOT free)
 
 
 ## Contributers
