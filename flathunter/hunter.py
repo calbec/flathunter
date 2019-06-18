@@ -57,7 +57,10 @@ class Hunter:
                     size=expose['size'],
                     price=expose['price'],
                     url=expose['url'],
-                    durations=self.get_formatted_durations(config, address)).strip()
+                    location=expose['location'],
+                    durations="",
+                    # UNCOMMENT below and COMMENT Above to enable duration feature
+                    #durations=self.get_formatted_durations(config, address)).strip()
 
                 # send message to all receivers
                 sender.send_msg(message)
