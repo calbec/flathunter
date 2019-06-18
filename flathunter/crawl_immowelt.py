@@ -79,8 +79,8 @@ class CrawlImmowelt:
                 'price': price,
                 'size': size,
                 'rooms': rooms ,
-                'address': address
-                'location': address ,
+                'address': address ,
+                'location': address 
             }
             entries.append(details)
         
