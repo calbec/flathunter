@@ -64,6 +64,7 @@ $ curl https://api.telegram.org/bot[BOT-TOKEN]/getUpdates
 
 #### Google API
 To use the distance calculation feature a [Google API-Key](https://developers.google.com/maps/documentation/javascript/get-api-key) is needed and requires the Distance Matrix API to be enabled. (This is NOT free)
+Since this feature is not free, I "disabled" it. Read line 62 in hunter.py to re-enable it.
 
 
 ## Contributers
