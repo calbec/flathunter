@@ -46,6 +46,7 @@ class CrawlImmowelt:
             url = "https://www.immowelt.de/" +expose_ids[idx].find("a").get("href")
             address = expose_ids[idx].find(class_="listlocation")
             address.find("span").extract()
+            address.find("strong").extract()
             print(address.text.strip())
             address = address.text.strip()
 			
