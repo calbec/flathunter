@@ -43,7 +43,11 @@ class CrawlImmowelt:
         for idx,title_el in enumerate(title_elements):
 			
             tags = expose_ids[idx].find_all(class_="hardfact")
-            address = "https://www.immowelt.de/" +expose_ids[idx].find("a").get("href")
+            url = "https://www.immowelt.de/" +expose_ids[idx].find("a").get("href")
+            address = expose_ids[idx].find(class_="listlocation")
+            address.find("span").extract()
+            print(address.text.strip())
+            address = address.text.strip()
 			
             try:
                 print(tags[0].find("strong").text)
@@ -70,7 +74,7 @@ class CrawlImmowelt:
 				
             details = {
                 'id': int(expose_ids[idx].get("data-estateid")),
-                'url':  address ,
+                'url':  url ,
                 'title': title_el.text.strip(),
                 'price': price,
                 'size': size,
