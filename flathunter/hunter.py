@@ -58,7 +58,7 @@ class Hunter:
                     price=expose['price'],
                     url=expose['url'],
                     location=expose['location'],
-                    durations="",
+                    durations=""
                     # UNCOMMENT below and COMMENT Above to enable duration feature
                     #durations=self.get_formatted_durations(config, address)).strip()
 
