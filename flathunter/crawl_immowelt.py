@@ -78,7 +78,59 @@ class CrawlImmowelt:
                 'address': address
             }
             entries.append(details)
+        
+        
+        #second element
+        soup = soup.find(id="listItemWrapperAsync")
+        try:
+            title_elements = soup.find_all("h2", {"class": "ellipsis" })
+        except AttributeError:
+            return entries
+        expose_ids=soup.find_all("div", class_="listitem_wrap")
 
+
+        #soup.find_all(lambda e: e.has_attr('data-adid'))
+        #print(expose_ids)
+        for idx,title_el in enumerate(title_elements):
+			
+            tags = expose_ids[idx].find_all(class_="hardfact")
+            address = "https://www.immowelt.de/" +expose_ids[idx].find("a").get("href")
+			
+            try:
+                print(tags[0].find("strong").text)
+                price = tags[0].find("strong").text.strip()
+            except IndexError:
+                print("Kein Preis angegeben")
+                price = "Auf Anfrage"
+
+            try:
+                tags[1].find("div").extract()
+                print(tags[1].text.strip())
+                size = tags[1].text.strip()
+            except IndexError:
+                size = "Nicht gegeben"
+                print("Quadratmeter nicht angegeben")				
+				
+            try:
+                tags[2].find("div").extract()
+                print(tags[2].text.strip())
+                rooms = tags[2].text.strip()
+            except IndexError:
+                print("Keine Zimmeranzahl gegeben")
+                rooms = "Nicht gegeben"
+				
+            details = {
+                'id': int(expose_ids[idx].get("data-estateid")),
+                'url':  address ,
+                'title': title_el.text.strip(),
+                'price': price,
+                'size': size,
+                'rooms': rooms ,
+                'address': address
+            }
+            entries.append(details)
+        
+        
         self.__log__.debug('extracted: ' + str(entries))
 
         return entries
