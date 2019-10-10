@@ -43,7 +43,7 @@ class CrawlWgGesucht:
     def extract_data(self, soup):
         entries = []
 
-        findings = soup.find_all(lambda e: e.has_attr('id') and e['id'].startswith('ad--'))
+        findings = soup.find_all(lambda e: e.has_attr('id') and e['id'].startswith('ad-'))
         existingFindings = list(
             filter(lambda e: e.has_attr('class') and not 'listenansicht-inactive' in e['class'], findings))
 
