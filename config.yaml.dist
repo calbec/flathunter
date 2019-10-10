@@ -9,7 +9,7 @@ loop:
 # List the URLs in the following format:
 # urls:
 # 	- https://www.immobilienscout24.de/Suche/...
-# 	- https://www.wg-gesucht.de/...
+# 	- https://www.wg-gesucht.de/...   # Use list search in wg-gesucht
 # 	- https://www.immowelt.de/...
 urls:
 
@@ -26,7 +26,7 @@ urls:
 # 
 # The example configuration below includes a place for
 # "John", located at the main train station of munich.
-# Two kinds of travel (bicycle and transit) are requested,
+# Three kinds of travel (bicycle, walking and transit) are requested,
 # each with a different label. Furthermore a place for
 # "Jane" is included, located at the given destination and
 # with the same kinds of travel.
