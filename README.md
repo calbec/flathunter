@@ -15,7 +15,9 @@ git clone https://github.com/GerRudi/flathunter.git
 apt install python3-pip
 cp config.yaml.dist config.yaml
 nano config.yaml
--> Do your edits to config file
+```
+Now, do your edits to config file in nano editor
+```
 apt install python3-setuptools
 apt install python3-wheel
 
@@ -39,7 +41,7 @@ to Telegram User
 optional arguments:
   -h, --help            show this help message and exit
   --config CONFIG, -c CONFIG
-                        Config file to use. If not set, try to use
+                        Config file to use, usually 'config.yaml'. If not set, try to use
                         '~git-clone-dir/config.yaml'
 
 ```
@@ -73,5 +75,4 @@ Since this feature is not free, I "disabled" it. Read line 62 in hunter.py to re
 - [@tschuehly](https://github.com/tschuehly)
 - [@Cugu](https://github.com/Cugu)
 - [@GerRudi](https://github.com/GerRudi)
-
-
+- [@calbec](https://github.com/calbec)

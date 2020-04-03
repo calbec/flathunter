@@ -11,7 +11,7 @@ from flathunter.crawl_wggesucht import CrawlWgGesucht
 from flathunter.idmaintainer import IdMaintainer
 from flathunter.hunter import Hunter
 from flathunter.crawl_ebaykleinanzeigen import CrawlEbayKleinanzeigen
-from flathunter.crawl_immowelt import CrawlImmowelt
+from flathunter.crawl_immowelt import CrawlImmoWelt
 
 __author__ = "Jan Harrie"
 __version__ = "1.0"
@@ -38,7 +38,7 @@ __log__ = logging.getLogger(__name__)
 
 
 def launch_flat_hunt(config):
-    searchers = [CrawlImmobilienscout(), CrawlWgGesucht(),CrawlEbayKleinanzeigen(),CrawlImmowelt()]
+    searchers = [CrawlImmobilienscout(), CrawlWgGesucht(),CrawlEbayKleinanzeigen(),CrawlImmoWelt()]
     id_watch = IdMaintainer('%s/processed_ids.db' % os.path.dirname(os.path.abspath(__file__)))
 
     hunter = Hunter()
@@ -64,7 +64,7 @@ def main():
     # load config
     config_handle = args.config
     __log__.info("Using config %s" % config_handle.name)
-    config = yaml.load(config_handle.read())
+    config = yaml.load(config_handle.read(), Loader=yaml.FullLoader)
 
     # check config
     if not config.get('telegram', dict()).get('bot_token'):
