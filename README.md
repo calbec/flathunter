@@ -76,3 +76,7 @@ Since this feature is not free, I "disabled" it. Read line 62 in hunter.py to re
 - [@Cugu](https://github.com/Cugu)
 - [@GerRudi](https://github.com/GerRudi)
 - [@calbec](https://github.com/calbec)
+
+
+## License
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
