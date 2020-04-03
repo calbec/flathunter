@@ -1,7 +1,13 @@
 # Python Flathunter-Helper
 
 ## Disclaimer
-This script crawls websites and looks for new offers. Any changes to the webpages can break this script immediately, use with caution. 
+This script crawls websites and looks for new flat offers. If there is a new offer, a Telegram Bot will notify you.
+
+Currently the script supports the following websites:
+- wg-gesucht.de
+- ebay-kleinanzeigen.de
+- immobilienscout24.de
+- immowelt.de
 
 
 ## Setup
